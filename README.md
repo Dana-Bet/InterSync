@@ -2,6 +2,10 @@
 
 ## Overview
 
+Evaluation of Interpersonal Synchronization between Individuals based on Video Recording
+Capstone Project Phase B
+P. 24-1-R-17
+
 The **InterSync** project is a robust tool designed for detecting and analyzing **Interpersonal Synchrony (IS)** using advanced computer vision techniques. By leveraging Google's **MediaPipe** for body landmark detection and implementing various algorithms such as **Dynamic Time Warping (DTW)**, **Time-Lagged Cross-Correlation (TLCC)**, and an adapted version of the **Smith-Waterman** algorithm, InterSync offers a granular analysis of movement synchrony between individuals.
 
 
