@@ -1003,41 +1003,41 @@ class MainWindow(QMainWindow):
                                                       explanation_text=(not generate_pdf_exclude_explanations),
                                                       attach_plot_images=(not generate_pdf_exclude_plots))
                 self.log_message('PDF report file saved')
-                if self.GenerateReportsWindow.ui.checkBox.isChecked():
-                    self.log_message('RAW data as Excel export started')
-                    excel_export.target_vectorframe_data_export_to_excel(target_for_export=self.__target1,
-                                                                         export_path=self.last_analysis_dir_path)
-                    excel_export.target_vectorframe_data_export_to_excel(target_for_export=self.__target2,
-                                                                         export_path=self.last_analysis_dir_path)
-                    output_file = os.path.join(self.last_analysis_dir_path, 'similarity_report_summary.xlsx')
-                    self.similarity_analysis_summary_df.to_excel(output_file, index=False)
-                    output_file = os.path.join(self.last_analysis_dir_path, 'smith_waterman_report_summary.xlsx')
-                    self.smith_waterman_analysis_summary_df.to_excel(output_file, index=False)
-                    output_file = os.path.join(self.last_analysis_dir_path, 'dtw_report_summary.xlsx')
-                    self.dtw_analysis_summary_df.to_excel(output_file, index=False)
-                    output_file = os.path.join(self.last_analysis_dir_path, 'tlcc_unified_report_summary.xlsx')
-                    self.tlcc_analysis_summary_unified_df.to_excel(output_file, index=False)
-                    output_file = os.path.join(self.last_analysis_dir_path, 'tlcc_separate_report_summary.xlsx')
-                    self.tlcc_analysis_summary_separate_df.to_excel(output_file, index=False)
-                    self.log_message('RAW data as Excel export finied')
+            if self.GenerateReportsWindow.ui.checkBox.isChecked():
+                self.log_message('RAW data as Excel export started')
+                excel_export.target_vectorframe_data_export_to_excel(target_for_export=self.__target1,
+                                                                     export_path=self.last_analysis_dir_path)
+                excel_export.target_vectorframe_data_export_to_excel(target_for_export=self.__target2,
+                                                                     export_path=self.last_analysis_dir_path)
+                output_file = os.path.join(self.last_analysis_dir_path, 'similarity_report_summary.xlsx')
+                self.similarity_analysis_summary_df.to_excel(output_file, index=False)
+                output_file = os.path.join(self.last_analysis_dir_path, 'smith_waterman_report_summary.xlsx')
+                self.smith_waterman_analysis_summary_df.to_excel(output_file, index=False)
+                output_file = os.path.join(self.last_analysis_dir_path, 'dtw_report_summary.xlsx')
+                self.dtw_analysis_summary_df.to_excel(output_file, index=False)
+                output_file = os.path.join(self.last_analysis_dir_path, 'tlcc_unified_report_summary.xlsx')
+                self.tlcc_analysis_summary_unified_df.to_excel(output_file, index=False)
+                output_file = os.path.join(self.last_analysis_dir_path, 'tlcc_separate_report_summary.xlsx')
+                self.tlcc_analysis_summary_separate_df.to_excel(output_file, index=False)
+                self.log_message('RAW data as Excel export finied')
 
-                if self.GenerateReportsWindow.ui.checkBox_3.isChecked():
-                    self.log_message('RAW data as CSV export started')
-                    excel_export.target_vectorframe_data_export_to_excel(target_for_export=self.__target1,
-                                                                         export_path=self.last_analysis_dir_path, csv=True)
-                    excel_export.target_vectorframe_data_export_to_excel(target_for_export=self.__target2,
-                                                                         export_path=self.last_analysis_dir_path, csv=True)
-                    output_file = os.path.join(self.last_analysis_dir_path, 'similarity_report_summary.xlsx')
-                    self.similarity_analysis_summary_df.to_csv(output_file, index=False)
-                    output_file = os.path.join(self.last_analysis_dir_path, 'smith_waterman_report_summary.csv')
-                    self.smith_waterman_analysis_summary_df.to_csv(output_file, index=False)
-                    output_file = os.path.join(self.last_analysis_dir_path, 'dtw_report_summary.xlsx')
-                    self.dtw_analysis_summary_df.to_csv(output_file, index=False)
-                    output_file = os.path.join(self.last_analysis_dir_path, 'tlcc_unified_report_summary.csv')
-                    self.tlcc_analysis_summary_unified_df.to_csv(output_file, index=False)
-                    output_file = os.path.join(self.last_analysis_dir_path, 'tlcc_separate_report_summary.csv')
-                    self.tlcc_analysis_summary_separate_df.to_csv(output_file, index=False)
-                    self.log_message('RAW data as CSV export finished')
+            if self.GenerateReportsWindow.ui.checkBox_3.isChecked():
+                self.log_message('RAW data as CSV export started')
+                excel_export.target_vectorframe_data_export_to_excel(target_for_export=self.__target1,
+                                                                     export_path=self.last_analysis_dir_path, csv=True)
+                excel_export.target_vectorframe_data_export_to_excel(target_for_export=self.__target2,
+                                                                     export_path=self.last_analysis_dir_path, csv=True)
+                output_file = os.path.join(self.last_analysis_dir_path, 'similarity_report_summary.xlsx')
+                self.similarity_analysis_summary_df.to_csv(output_file, index=False)
+                output_file = os.path.join(self.last_analysis_dir_path, 'smith_waterman_report_summary.csv')
+                self.smith_waterman_analysis_summary_df.to_csv(output_file, index=False)
+                output_file = os.path.join(self.last_analysis_dir_path, 'dtw_report_summary.xlsx')
+                self.dtw_analysis_summary_df.to_csv(output_file, index=False)
+                output_file = os.path.join(self.last_analysis_dir_path, 'tlcc_unified_report_summary.csv')
+                self.tlcc_analysis_summary_unified_df.to_csv(output_file, index=False)
+                output_file = os.path.join(self.last_analysis_dir_path, 'tlcc_separate_report_summary.csv')
+                self.tlcc_analysis_summary_separate_df.to_csv(output_file, index=False)
+                self.log_message('RAW data as CSV export finished')
             self.log_message("Export is finished successfully", 'notification')
 
     def video_analysis_run_from_gui(self, frame_array):
@@ -1095,12 +1095,12 @@ class MainWindow(QMainWindow):
             image = utility.draw_landmarks_on_image(image, tvf2.get_movement_vectors_origin_points())
 
             image = utility.draw_motion_vectors_on_img(image_object=image,
-                                                       motion_vectors=tvf1.get_transformed_limb_movement_vectors(),
+                                                       motion_vectors=tvf1.get_limb_movement_vectors(),
                                                        initial_position_landmarks=None,
                                                        initial_position_points=tvf1.get_limb_movement_vectors_origin_points(),
                                                        scale=100)
             image = utility.draw_motion_vectors_on_img(image_object=image,
-                                                       motion_vectors=tvf2.get_transformed_limb_movement_vectors(),
+                                                       motion_vectors=tvf2.get_limb_movement_vectors(),
                                                        initial_position_landmarks=None,
                                                        initial_position_points=tvf2.get_limb_movement_vectors_origin_points(),
                                                        scale=100)
