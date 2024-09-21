@@ -1,7 +1,6 @@
 # VectorFrame class
 import numpy as np
 from mediapipe.tasks.python.components.containers import NormalizedLandmark
-from numpy.distutils.command.config import config
 
 from . import config
 import data.detector_dict
@@ -52,6 +51,11 @@ def transform_vectors_array(movement_vectors, basis_vectors):
 
 
 current_global_vectorframe_id = 0
+
+
+def reset_global_vectorframe_id():
+    global current_global_vectorframe_id
+    current_global_vectorframe_id = 0
 
 
 class VectorFrame:

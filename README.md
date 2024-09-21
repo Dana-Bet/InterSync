@@ -1,6 +1,0 @@
-**Evaluation of Interpersonal Synchronization between Individuals based on Video Recording**
-
-The aim of the project is to improve the ability to measure Interpersonal Synchrony (IS) for the research purposes. Interpersonal Synchrony, which is an alignment of behaviors, emotions, and physiological responses between individuals, significantly influences social bonding, empathy, cooperation, and mental health. In our project we focus on synchrony of motion, found in people participating in a ‘mirror game’ exercise, where in a controlled environment, participants mimic each other’s movements, allowing for a more structured analysis and measurement of IS.
-
-Current video-based analysis tools struggle with a particular issue where the body parts of the participants overlap, which prevents accurate measurement.
-Our proposed solution involves calculating movement vectors for each body part from video data, using algorithms to assess synchronization even when participants' movements overlap or are partially obscured. This approach aims to address the drawbacks of traditional methods by providing a three-dimensional analysis of IS, offering a more robust understanding of how individuals sync during interactions.
